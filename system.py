@@ -1,4 +1,5 @@
 from parameters import Parameters
+from tcsolver import TcSolver
 
 
 class System:
@@ -10,6 +11,4 @@ class System:
         self.material = material
         self.shape = shape
         self.parameters = Parameters(material, shape)
-
-    def get_tc():
-        print("Hello")
+        self.solver = TcSolver(self.parameters)
